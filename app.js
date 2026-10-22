@@ -18,13 +18,16 @@ const games=[
 {id:'2048',name:'2048',category:'Puzzle',cost:1,rating:'4.9',url:'https://h5-2048.helloboss.online/',desc:'Ghép các ô số giống nhau để đạt 2048.',how:['Vuốt để di chuyển các ô số.','Hai ô cùng số sẽ hợp thành một ô lớn hơn.','Cố gắng tạo ra ô số 2048.']},
 {id:'basketball',name:'Basketball',category:'Sports',cost:1,rating:'4.8',url:'https://h5-basketball.helloboss.online/',desc:'Ném bóng vào rổ và chinh phục điểm cao.',how:['Điều chỉnh hướng ném bóng.','Canh lực và thời điểm để ghi điểm.','Ghi thật nhiều điểm trước khi hết giờ.']},
 {id:'jewel',name:'Jewel',category:'Puzzle',cost:1,rating:'4.8',url:'https://h5-jewel.helloboss.online/',desc:'Ghép các viên ngọc để tạo điểm số cao.',how:['Tìm các viên ngọc cùng màu.','Ghép các viên ngọc để ghi điểm.','Hoàn thành mục tiêu của màn chơi.']},
-{id:'racing',name:'Racing',category:'Racing',cost:1,rating:'4.8',url:'https://h5-racing.helloboss.online/',desc:'Tăng tốc và chinh phục đường đua.',how:['Điều khiển xe tránh chướng ngại vật.','Thu thập vật phẩm trên đường đua.','Về đích với thành tích tốt nhất.']}
+{id:'racing',name:'Racing',category:'Action',cost:1,rating:'4.8',url:'https://h5-racing.helloboss.online/',desc:'Tăng tốc và chinh phục đường đua.',how:['Điều khiển xe tránh chướng ngại vật.','Thu thập vật phẩm trên đường đua.','Về đích với thành tích tốt nhất.']}
 ];
-const categories=[['Tất cả','✨'],['Puzzle','🧩'],['Casual','⭐'],['Sports','⚽']];
+const categories=[['Tất cả','✨'],['Puzzle','🧩'],['Casual','⭐'],['Sports','⚽'],['Action','⚡']];
 const menu=[['home','nav-home','Trang chủ'],['catalog','nav-game','Game'],['tournament','nav-tournament','Giải đấu'],['leaderboard','nav-leaderboard','Xếp hạng'],['account','nav-account','Tôi']];
-const defaultState={page:'home',previous:'home',game:'jigsaw',category:'Tất cả',query:'',credits:120,loggedIn:false,phone:'',favorites:[],played:[],scores:[],joined:false,packageName:'Gói trải nghiệm',transactions:[],selectedPackage:20,paymentMethod:'MoMo',paymentStage:'idle',authStep:'phone',returnAfterLogin:'home',packageTermsAccepted:false,confirmTermsAccepted:false};
+const defaultState={page:'home',previous:'home',game:'jigsaw',category:'Tất cả',query:'',credits:0,loggedIn:false,phone:'',favorites:[],played:[],scores:[],joined:false,packageName:'Gói trải nghiệm',transactions:[],selectedPackage:20,paymentMethod:'MoMo',paymentStage:'idle',authStep:'phone',returnAfterLogin:'home',packageTermsAccepted:false,confirmTermsAccepted:false};
 let state={...defaultState};
 try{const saved=JSON.parse(localStorage.getItem('wiig_v14')||'{}');state={...state,...saved,page:'home',previous:'home',query:''}}catch(e){}
+// Lượt chơi chỉ thuộc tài khoản đã đăng nhập; không giữ số dư demo cho khách.
+if(!state.loggedIn) state.credits=0;
+state.credits=Math.max(0,Number(state.credits)||0);
 function save(){try{localStorage.setItem('wiig_v14',JSON.stringify(state))}catch(e){}}
 function go(page){if(page===state.page){render();return;}state.previous=state.page;state.page=page;state.query='';save();render();window.scrollTo(0,0)}
 function back(){go(state.previous&&state.previous!==state.page?state.previous:'home')}
@@ -43,7 +46,7 @@ function section(title,link='',target='catalog'){return `<div class="section-hea
 function homeCard(g){return `<article class="game-card"><div class="game-art" data-detail="${g.id}"><img src="${gameArt(g)}" alt="${g.name}" loading="lazy"><span class="play-chip">🟡 ${g.cost} lượt</span></div><div class="game-card-body"><h3 data-detail="${g.id}">${g.name}</h3><div class="game-meta"><span>${g.category}</span><b>★ ${g.rating}</b></div><button class="btn purple" data-play-game="${g.id}">▶ Chơi ngay</button></div></article>`}
 function leaderboardRows(){let rows=[{name:'DragonKnight',score:12480,avatar:'avatar1'},{name:'MoonLily',score:11960,avatar:'avatar2'},{name:'Bạn',score:state.scores.reduce((a,b)=>a+b.score,0)||10320,avatar:'avatar3'}];return `<div class="rank-list">${rows.map((r,i)=>`<div class="rank-row ${i===2?'rank-me':''}"><span class="rank-position rank-position-${i+1}">${i===0?'👑':i+1}</span><img class="rank-avatar" src="${A(r.avatar)}" alt=""><span class="name">${r.name}</span><span class="score">${r.score.toLocaleString('en-US')} <span class="rank-cup">🏆</span></span></div>`).join('')}</div>`}
 function home(){return `<div class="banner"><div class="banner-text"><span class="banner-tag">🎮 7 trò chơi</span><h1>Khám phá<br>thế giới game</h1><p>7 game hấp dẫn, giải đấu và phần thưởng mỗi ngày đang chờ bạn!</p><div class="banner-actions"><button class="btn white" data-go="catalog">▶ Chơi ngay</button><button class="btn ghost" data-go="catalog">Xem game →</button></div><div class="dots"><span></span><span></span><span></span></div></div><img class="banner-art" src="${A('hero')}" alt="Nhân vật 3D WiiG"></div>
-${section('Danh mục game')}<div class="category-grid">${[['Puzzle','puzzle'],['Casual','casual'],['Sports','sports']].map(([name,img])=>`<button class="category-tile" data-category="${name}"><img src="${A(img)}" alt="">${name}</button>`).join('')}</div>
+${section('Danh mục game')}<div class="category-grid">${[['Puzzle','puzzle'],['Casual','casual'],['Sports','sports'],['Action','action']].map(([name,img])=>`<button class="category-tile" data-category="${name}"><img src="${A(img)}" alt="">${name}</button>`).join('')}</div>
 ${section('Game nổi bật','Xem tất cả','catalog')}<div class="game-grid">${games.slice(0,4).map(homeCard).join('')}</div>
 ${section('Giải đấu nổi bật','Xem tất cả','tournament')}<div class="tournament-card"><img src="${A('trophy')}" alt="Cúp giải đấu"><div><span class="status">● Đang mở</span><h3>Speed Challenge</h3><p>Thử thách tốc độ, săn điểm cao, nhận phần thưởng hấp dẫn.</p><button class="btn purple" data-go="tournament">Tham gia ngay →</button></div><button class="btn ghost" style="color:#7137f5;border-color:#e0d7ff" data-go="tournament">Xem giải đấu →</button></div>
 <div class="promo promo-credits"><img class="promo-coin-art" src="assets/coins-cutout.png" alt="Xu lượt chơi WiiG"><div class="promo-copy"><span class="promo-tag">Gói lượt chơi</span><h3>20 lượt chơi</h3><p><span class="promo-infinity">∞</span> Cộng dồn, không hết hạn</p></div><button class="btn purple" data-go="packages">Mua gói →</button></div>
@@ -229,12 +232,38 @@ function history(){return walletHistory()}
 function esc(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function showModal(title,content,buttons=[['Đóng',()=>{}]]){const root=document.createElement('div');root.className='overlay';root.innerHTML=`<div class="dialog"><h2>${title}</h2><p>${content}</p><div class="buttons">${buttons.map(([name],i)=>`<button class="btn ${i===buttons.length-1?'purple':'ghost'}" data-modal="${i}">${name}</button>`).join('')}</div></div>`;document.body.appendChild(root);root.addEventListener('click',e=>{const b=e.target.closest('[data-modal]');if(b){const fn=buttons[Number(b.dataset.modal)][1];root.remove();fn()}else if(e.target===root)root.remove()})}
 function requireAuth(next){if(state.loggedIn)return true;state.returnAfterLogin=next;state.authStep='phone';go('account');return false}
-function play(){openGameFrame(state.game)}
+function play(){return requestPlay(state.game)}
+function requestPlay(id){
+ const g=games.find(x=>x.id===id); if(!g)return;
+ state.game=g.id;
+ if(!state.loggedIn){state.returnAfterLogin='play';state.authStep='phone';go('account');return;}
+ const balance=Math.max(0,Number(state.credits)||0);
+ if(balance<g.cost){showModal('Bạn chưa đủ lượt chơi',`Bạn cần ${g.cost} lượt để chơi ${g.name}, nhưng hiện có ${balance} lượt. Hãy nạp thêm lượt để tiếp tục.`,[['Để sau',()=>{}],['Nạp lượt',()=>go('packages')]]);return;}
+ state.credits=balance-g.cost;
+ state.played=Array.from(new Set([...(state.played||[]),g.id]));
+ state.walletSpends=state.walletSpends||[];
+ state.walletSpends.push({name:g.name,credits:g.cost,date:new Date().toLocaleDateString('vi-VN')});
+ save();
+ openGameFrame(g.id);
+}
 function openGameFrame(id){
  const g=games.find(x=>x.id===id);if(!g)return;
  state.game=g.id;save();
- // Happy Fishing currently sends X-Frame-Options: SAMEORIGIN, so it cannot be embedded cross-origin.
- if(g.id==='fishing'){window.open(g.url,'_blank','noopener,noreferrer');document.querySelector('.hb-game-overlay')?.remove();document.body.classList.remove('hb-game-open');return;}
+ // These games are known not to work in a cross-origin iframe. Open them directly
+ // in a new tab and ensure no stale game overlay remains over the Portal.
+ const externalTabGames = new Set(['fishing','2048','basketball','jewel']);
+ if(externalTabGames.has(g.id)){
+   document.querySelector('.hb-game-overlay')?.remove();
+   document.body.classList.remove('hb-game-open');
+   const opened = window.open(g.url,'_blank','noopener,noreferrer');
+   if(!opened){
+     showModal('Cho phép mở game','Trình duyệt đã chặn cửa sổ mới. Hãy cho phép pop-up cho trang Portal rồi nhấn Chơi lại, hoặc mở game bằng liên kết bên dưới.',[
+       ['Đóng',()=>{}],
+       ['Mở game',()=>{window.location.href=g.url;}]
+     ]);
+   }
+   return;
+ }
 
  document.querySelector('.hb-game-overlay')?.remove();
  const root=document.createElement('div');root.className='hb-game-overlay';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Đang chơi '+g.name);
@@ -242,7 +271,7 @@ function openGameFrame(id){
  const title=document.createElement('div');title.className='hb-game-title';title.textContent='🎮 '+g.name;
  const actions=document.createElement('div');actions.className='hb-game-actions';
  const external=document.createElement('a');external.href=g.url;external.target='_blank';external.rel='noopener noreferrer';external.textContent='Mở tab mới ↗';external.title='Mở game ở tab mới và đóng khung game này';external.addEventListener('click',()=>{root.remove();document.body.classList.remove('hb-game-open');document.removeEventListener('keydown',onKey)});
- const close=document.createElement('button');close.type='button';close.className='hb-game-close';close.textContent='✕ Đóng';close.setAttribute('aria-label','Đóng game và quay về WiiG');
+ const close=document.createElement('button');close.type='button';close.className='hb-game-close';close.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Đóng</span>';close.setAttribute('aria-label','Đóng game và quay về WiiG');
  actions.append(external,close);bar.append(title,actions);
  const frame=document.createElement('iframe');frame.src=g.url;frame.title=g.name;frame.allow='autoplay; fullscreen; gamepad; clipboard-read; clipboard-write';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';
  const hint=document.createElement('div');hint.className='hb-game-hint';hint.innerHTML='<span>Đang tải game… Nếu game không hiển thị, hãy chọn <b>Mở tab mới ↗</b> ở phía trên.</span>';
@@ -253,9 +282,43 @@ function openGameFrame(id){
  close.focus();
 }
 function render(){const views={home,catalog,detail,tournament,leaderboard,rankGame,rankTournament,rankHistory,notifications,notificationDetail,smsGuide,termsPrivacy,helpCenter,packages,packageDetail,packageConfirm,packageProcessing,packageSuccess,wallet,walletHistory,account,mygames,history};const page=views[state.page]||home;$('#app').innerHTML=`<div class="shell ${state.page==='account'&&!state.loggedIn?'shell-auth':''} ${state.page==='account'&&state.loggedIn?'shell-profile':''}">${state.page==='packages'?packagesHeader():['account','wallet','walletHistory','leaderboard','rankGame','rankTournament','rankHistory','notifications','notificationDetail','smsGuide','termsPrivacy','helpCenter'].includes(state.page)?'':header()}<main class="content">${page()}</main>${state.page==='account'&&!state.loggedIn?'':nav()}</div>`;bind();bindOtp();save()}
+function handleAction(action){
+ if(action==='play'){requestPlay(state.game);return;}
+ if(action==='favorite'){if(!state.loggedIn){state.returnAfterLogin='favorite';state.authStep='phone';go('account');return;}state.favorites=state.favorites||[];state.favorites=state.favorites.includes(state.game)?state.favorites.filter(x=>x!==state.game):[...state.favorites,state.game];save();render();return;}
+ if(action==='editphone'){state.authStep='phone';render();return;}
+ if(action==='sendotp'){
+  const input=document.getElementById('phone-input');const phone=(input?.value||'').replace(/\D/g,'');
+  const err=document.getElementById('auth-error');
+  if(phone.length<9||phone.length>11){if(err)err.textContent='Vui lòng nhập số điện thoại hợp lệ.';return;}
+  state.phone=phone;state.authStep='otp';save();render();return;
+ }
+ if(action==='verifyotp'){
+  const otp=Array.from(document.querySelectorAll('.otp-digit')).map(x=>x.value).join('');
+  const err=document.getElementById('auth-error');
+  if(otp!=='123456'){if(err)err.textContent='Mã OTP chưa đúng. Hãy nhập 123456 để thử nghiệm.';return;}
+  state.loggedIn=true;state.credits=Math.max(0,Number(state.credits)||0);save();
+  const next=state.returnAfterLogin||'home';
+  if(next==='play'){go('detail');showModal('Đăng nhập thành công',state.credits>0?'Bạn đã đăng nhập. Hãy nhấn Chơi ngay để bắt đầu.':'Bạn đã đăng nhập nhưng chưa có lượt chơi. Hãy nạp lượt trước khi chơi.',[['Đóng',()=>{}],...(state.credits>0?[]:[['Nạp lượt',()=>go('packages')]])]);}
+  else if(next==='favorite'){go('detail');}
+  else go(next==='mygames'?'mygames':next==='packages'?'packages':'home');
+  return;
+ }
+ if(action==='continuePackage'){
+  if(!state.packageTermsAccepted){showModal('Cần đồng ý điều khoản','Vui lòng tích chọn đồng ý với Điều khoản sử dụng và Chính sách bảo mật trước khi tiếp tục.',[['Đóng',()=>{}]]);return;}
+  state.confirmTermsAccepted=false;save();go('packageConfirm');return;
+ }
+ if(action==='confirmPurchase'){
+  if(!state.confirmTermsAccepted){showModal('Cần đồng ý điều khoản','Vui lòng tích chọn đồng ý với Điều khoản sử dụng và Chính sách bảo mật trước khi xác nhận.',[['Đóng',()=>{}]]);return;}
+  state.paymentCode='TX-'+Date.now().toString().slice(-8);state.paymentDate=new Date().toLocaleString('vi-VN');state.paymentStage='processing';save();go('packageProcessing');return;
+ }
+ if(action==='completePurchase'){
+  const p=purchaseSelected();state.credits=(Number(state.credits)||0)+p.count;state.transactions=state.transactions||[];state.transactions.push({credits:p.count,date:new Date().toLocaleDateString('vi-VN')});state.paymentStage='success';save();go('packageSuccess');return;
+ }
+ if(action==='supportContact'){showModal('Liên hệ hỗ trợ','Đây là bản prototype. Hãy tích hợp kênh hỗ trợ thực tế để gửi yêu cầu.',[['Đóng',()=>{}]]);return;}
+}
 function bindOtp(){const inputs=Array.from(document.querySelectorAll('.otp-digit'));inputs.forEach((input,i)=>{input.addEventListener('input',e=>{const v=e.target.value.replace(/\D/g,'');if(v.length>1){[...v.slice(0,6-i)].forEach((d,k)=>{if(inputs[i+k])inputs[i+k].value=d});inputs[Math.min(5,i+v.length-1)].focus()}else{input.value=v;if(v&&i<5)inputs[i+1].focus()}});input.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!input.value&&i>0)inputs[i-1].focus()});input.addEventListener('paste',e=>{e.preventDefault();const v=e.clipboardData.getData('text').replace(/\D/g,'').slice(0,6);[...v].forEach((d,k)=>{inputs[k].value=d});inputs[Math.min(5,v.length)].focus()})});if(inputs.length)inputs[0].focus()}
 function bind(){
-document.querySelectorAll('[data-play-game]').forEach(b=>b.onclick=()=>openGameFrame(b.dataset.playGame));
+document.querySelectorAll('[data-play-game]').forEach(b=>b.onclick=()=>requestPlay(b.dataset.playGame));
 
 document.querySelectorAll('[data-detail-ranking]').forEach(b=>b.onclick=()=>{state.rankGame=state.game;rankNavigate('rankGame')});
 
@@ -277,5 +340,5 @@ document.querySelectorAll('[data-rank-game]').forEach(b=>b.onclick=()=>{state.ra
 document.querySelectorAll('[data-rank-setting]').forEach(b=>b.onclick=()=>{state[b.dataset.rankSetting]=b.dataset.rankValue;save();render()});
 const rankSelect=document.getElementById('rank-game-select');if(rankSelect)rankSelect.onchange=()=>{state.rankGame=rankSelect.value;save();render()};
 const rankMore=document.querySelector('[data-rank-more]');if(rankMore)rankMore.onclick=()=>{rankMore.textContent='Đã hiển thị bảng xếp hạng';rankMore.disabled=true};
-[['package-terms','packageTermsAccepted','.pd-continue'],['confirm-terms','confirmTermsAccepted','.pc-submit']].forEach(([id,key,selector])=>{const cb=document.getElementById(id),btn=document.querySelector(selector);if(cb&&btn){btn.disabled=!cb.checked;cb.addEventListener('change',()=>{state[key]=cb.checked;btn.disabled=!cb.checked;save()})}});document.querySelectorAll('[data-select-package]').forEach(b=>b.onclick=()=>{state.selectedPackage=Number(b.dataset.selectPackage);state.paymentStage='idle';state.packageTermsAccepted=false;state.confirmTermsAccepted=false;go('packageDetail')});document.querySelectorAll('[data-payment]').forEach(b=>b.onclick=()=>{state.paymentMethod=b.dataset.payment;save();render()});document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{if(['notifications','smsGuide','termsPrivacy','helpCenter'].includes(b.dataset.go))state.supportFrom=state.page;if(b.dataset.go==='catalog'){state.category='Tất cả'}go(b.dataset.go)});document.querySelectorAll('[data-back]').forEach(b=>b.onclick=back);document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>{state.game=b.dataset.detail;go('detail')});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{state.category=b.dataset.category;go('catalog')});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>handleAction(b.dataset.action));document.querySelectorAll('[data-package]').forEach(b=>b.onclick=()=>{if(!requireAuth('packages'))return;const credits=Number(b.dataset.package);showModal('Xác nhận gói chơi',`Kích hoạt gói ${credits} lượt chơi demo? Không có giao dịch thật.`,[['Hủy',()=>{}],['Kích hoạt',()=>{state.credits+=credits;state.packageName=credits+' lượt';state.transactions.push({credits,date:new Date().toLocaleDateString('vi-VN')});save();go('account');showModal('Kích hoạt thành công',`Đã cộng ${credits} lượt vào tài khoản.`)}]])});document.querySelectorAll('[data-wallet-filter]').forEach(b=>b.onclick=()=>{state.walletFilter=b.dataset.walletFilter;save();render()});const search=$('#search');if(search){search.addEventListener('input',()=>{state.query=search.value;const list=games.filter(g=>(state.category==='Tất cả'||g.category===state.category)&&(!state.query||(g.name+' '+g.category).toLowerCase().includes(state.query.toLowerCase())));$('#catalog-grid').innerHTML=list.length?list.map(catalogCard).join(''):'<div class="empty">Không có game phù hợp.</div>';document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>{state.game=b.dataset.detail;go('detail')})})}const filter=$('#filters');if(filter){let startX=0,scrollStart=0,moved=false;filter.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button===0){startX=e.clientX;scrollStart=filter.scrollLeft;moved=false}});filter.addEventListener('pointermove',e=>{if(e.buttons!==1||e.pointerType!=='mouse')return;const dx=e.clientX-startX;if(Math.abs(dx)>4)moved=true;if(moved)filter.scrollLeft=scrollStart-dx});filter.addEventListener('click',e=>{if(moved){e.stopPropagation();e.preventDefault();moved=false}},true);filter.addEventListener('wheel',e=>{if(filter.scrollWidth>filter.clientWidth){filter.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false})}}
+[['package-terms','packageTermsAccepted','.pd-continue'],['confirm-terms','confirmTermsAccepted','.pc-submit']].forEach(([id,key,selector])=>{const cb=document.getElementById(id),btn=document.querySelector(selector);if(cb&&btn){btn.disabled=!cb.checked;cb.addEventListener('change',()=>{state[key]=cb.checked;btn.disabled=!cb.checked;save()})}});document.querySelectorAll('.pd-terms a,.pc-terms a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();state.supportFrom=state.page;go('termsPrivacy')}));document.querySelectorAll('[data-select-package]').forEach(b=>b.onclick=()=>{state.selectedPackage=Number(b.dataset.selectPackage);state.paymentStage='idle';state.packageTermsAccepted=false;state.confirmTermsAccepted=false;go('packageDetail')});document.querySelectorAll('[data-payment]').forEach(b=>b.onclick=()=>{state.paymentMethod=b.dataset.payment;save();render()});document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{if(['notifications','smsGuide','termsPrivacy','helpCenter'].includes(b.dataset.go))state.supportFrom=state.page;if(b.dataset.go==='catalog'){state.category='Tất cả'}go(b.dataset.go)});document.querySelectorAll('[data-back]').forEach(b=>b.onclick=back);document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>{state.game=b.dataset.detail;go('detail')});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{state.category=b.dataset.category;go('catalog')});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>handleAction(b.dataset.action));document.querySelectorAll('[data-package]').forEach(b=>b.onclick=()=>{if(!requireAuth('packages'))return;const credits=Number(b.dataset.package);showModal('Xác nhận gói chơi',`Kích hoạt gói ${credits} lượt chơi demo? Không có giao dịch thật.`,[['Hủy',()=>{}],['Kích hoạt',()=>{state.credits+=credits;state.packageName=credits+' lượt';state.transactions.push({credits,date:new Date().toLocaleDateString('vi-VN')});save();go('account');showModal('Kích hoạt thành công',`Đã cộng ${credits} lượt vào tài khoản.`)}]])});document.querySelectorAll('[data-wallet-filter]').forEach(b=>b.onclick=()=>{state.walletFilter=b.dataset.walletFilter;save();render()});const search=$('#search');if(search){search.addEventListener('input',()=>{state.query=search.value;const list=games.filter(g=>(state.category==='Tất cả'||g.category===state.category)&&(!state.query||(g.name+' '+g.category).toLowerCase().includes(state.query.toLowerCase())));$('#catalog-grid').innerHTML=list.length?list.map(catalogCard).join(''):'<div class="empty">Không có game phù hợp.</div>';document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>{state.game=b.dataset.detail;go('detail')})})}const filter=$('#filters');if(filter){let startX=0,scrollStart=0,moved=false;filter.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button===0){startX=e.clientX;scrollStart=filter.scrollLeft;moved=false}});filter.addEventListener('pointermove',e=>{if(e.buttons!==1||e.pointerType!=='mouse')return;const dx=e.clientX-startX;if(Math.abs(dx)>4)moved=true;if(moved)filter.scrollLeft=scrollStart-dx});filter.addEventListener('click',e=>{if(moved){e.stopPropagation();e.preventDefault();moved=false}},true);filter.addEventListener('wheel',e=>{if(filter.scrollWidth>filter.clientWidth){filter.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false})}}
 render();
