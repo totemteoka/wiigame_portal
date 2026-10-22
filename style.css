@@ -713,3 +713,7 @@ body.hb-game-open{overflow:hidden!important}
 .hb-game-close svg{display:block;width:16px;height:16px;flex:0 0 16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .hb-game-close span{display:block}
 @media(max-width:620px){.category-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 10px}.category-grid .category-tile,.category-grid .category-tile:nth-child(n){width:100%;min-height:74px;font-size:10px}.category-grid .category-tile img{width:min(100%,62px);height:auto;aspect-ratio:1.12}.hb-game-close{min-width:76px;min-height:34px;padding:7px 9px;gap:5px}.hb-game-close svg{width:14px;height:14px;flex-basis:14px}}
+/* v54: account actions + a consistent back affordance on the sign-in screen */
+.new-auth{position:relative}
+.new-auth .auth-back{z-index:3;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#f2f0ff;color:#5b43c8;font-size:30px;line-height:1;cursor:pointer;top:10px;left:10px}
+.new-auth .auth-back:hover{background:#e8e3ff}

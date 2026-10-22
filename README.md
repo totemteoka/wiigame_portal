@@ -1,8 +1,7 @@
-# WiiG Portal v48 — HelloBoss 7 games with supplied artwork
+# WiiG Portal v57
 
-- Updated all seven game image sources to the exact image URLs supplied by the user.
-- Game artwork is responsive (`object-fit: cover`) in home cards, catalog, detail page, and My Games.
-- Happy Fishing opens in a new tab because its server blocks cross-origin iframe embedding with `X-Frame-Options: SAMEORIGIN`.
-- Other games retain the iframe overlay and the open-in-new-tab fallback.
+- Fixed Account actions: Personal information lets the user update the demo phone number; Language shows available language choices and clearly indicates English translation is not yet implemented; Logout asks for confirmation and clears the local demo session and credits.
+- Added a back button to the sign-in screen. It returns to the screen that requested authentication, falling back to Home when appropriate. On the OTP screen, the same back button returns to phone entry.
+- Existing 7 games, image assets, play checks, payment prototype, and external-tab routing are preserved.
 
-Open `index.html` through a local static server or deploy the folder to GitHub Pages.
+Demo only: authentication and account state are client-side and should be backed by a real server before production.

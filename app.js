@@ -29,7 +29,7 @@ try{const saved=JSON.parse(localStorage.getItem('wiig_v14')||'{}');state={...sta
 if(!state.loggedIn) state.credits=0;
 state.credits=Math.max(0,Number(state.credits)||0);
 function save(){try{localStorage.setItem('wiig_v14',JSON.stringify(state))}catch(e){}}
-function go(page){if(page===state.page){render();return;}state.previous=state.page;state.page=page;state.query='';save();render();window.scrollTo(0,0)}
+function go(page){const accountPages=['packages','packageDetail','packageConfirm','packageProcessing','packageSuccess'];if(accountPages.includes(page)&&!state.loggedIn){state.returnAfterLogin=page==='packageDetail'||page==='packageConfirm'||page==='packageProcessing'||page==='packageSuccess'?'packages':page;state.authStep='phone';if(state.page!=='account'){state.previous=state.page;state.page='account';state.query='';save();render();window.scrollTo(0,0);}else render();return;}if(page===state.page){render();return;}state.previous=state.page;state.page=page;state.query='';save();render();window.scrollTo(0,0)}
 function back(){go(state.previous&&state.previous!==state.page?state.previous:'home')}
 const FOOTER_ICONS={"nav-home": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m3.5 10 8.5-7 8.5 7v9a2 2 0 0 1-2 2H5.5a2 2 0 0 1-2-2z\"/><path d=\"M9 21v-8h6v8\"/></svg>", "nav-game": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6.5 8h11a4 4 0 0 1 3.9 3.1l1.1 5.3a3 3 0 0 1-4.9 2.9l-2.5-2.1H8.9l-2.5 2.1a3 3 0 0 1-4.9-2.9l1.1-5.3A4 4 0 0 1 6.5 8Z\"/><path d=\"M7.5 11v5M5 13.5h5\"/><circle cx=\"16.5\" cy=\"12\" r=\".8\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"19\" cy=\"14.5\" r=\".8\" fill=\"currentColor\" stroke=\"none\"/></svg>", "nav-tournament": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 3h10v7a5 5 0 0 1-10 0z\"/><path d=\"M7 5H4a2 2 0 0 0 0 4h3m10-4h3a2 2 0 0 1 0 4h-3M12 15v4m-4 2h8m-7-2h6\"/></svg>", "nav-leaderboard": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 20v-6m7 6V9m7 11V4\" stroke-linecap=\"round\"/></svg>", "nav-account": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4.5 21v-2a7.5 7.5 0 0 1 15 0v2\"/></svg>"};
 function nav(){return `<nav class="bottomnav" aria-label="Điều hướng chính">${menu.map(([id,ico,label])=>`<button type="button" class="navbtn ${state.page===id?'active':''}" data-go="${id}" ${state.page===id?'aria-current="page"':''}><span class="wg-footer-icon">${FOOTER_ICONS[ico]}</span><span class="nav-label">${label}</span></button>`).join('')}</nav>`}
@@ -213,11 +213,11 @@ const faq=[['Đăng nhập và tài khoản','Các câu hỏi về đăng nhập
 function helpCenter(){const faqIcons=['help-login','help-packages','help-renew','help-tournament','help-ranking'];const descriptions=['Các câu hỏi về đăng nhập, OTP, quản lý tài khoản.','Thông tin về các gói, quyền lợi và cách sử dụng.','Hướng dẫn gia hạn, hủy gia hạn qua SMS.','Cách tham gia, thể lệ, kết quả và phần thưởng.','Cách tính điểm, bảng xếp hạng và lịch sử.'];return `<div class="support-page help-figma-v37">${supportHead('Trung tâm trợ giúp','Chúng tôi luôn sẵn sàng hỗ trợ bạn')}<div class="help-search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input class="support-search" id="help-search" placeholder="Nhập vấn đề bạn cần hỗ trợ..."></div><div class="support-shortcuts"><button data-help-quick="0"><img src="${A('help-otp')}" alt=""> <span><strong>Lỗi OTP</strong><small>Không nhận được mã</small></span></button><button data-go="packages"><img src="${A('help-payment')}" alt=""><span><strong>Thanh toán</strong><small>Hướng dẫn gói cước</small></span></button><button data-go="smsGuide"><img src="${A('help-credit')}" alt=""><span><strong>Không nhận được lượt</strong><small>Kiểm tra giao dịch</small></span></button></div><div class="support-hero"><div><h2>Bạn cần<br>hỗ trợ gì?</h2><p>Tìm câu trả lời nhanh trong các câu hỏi thường gặp hoặc gửi yêu cầu hỗ trợ cho chúng tôi.</p></div><img src="${A('help-mascot-figma')}" alt="Nhân vật hỗ trợ WiiG"></div><div class="support-help-heading"><h3>Câu hỏi thường gặp</h3><button data-go="termsPrivacy">Xem tất cả ›</button></div><div id="help-faq">${faq.map(([t,x],i)=>`<div class="faq-row"><button data-faq="${i}"><img class="faq-topic-icon" src="${A(faqIcons[i]||'help-login')}" alt=""><span class="faq-topic-copy"><strong>${t}</strong><small>${descriptions[i]||''}</small></span><b>${state.faqOpen===i?'⌃':'⌄'}</b></button><p class="faq-answer" style="display:${state.faqOpen===i?'block':'none'}">${x} ${i===2?'<button data-go="smsGuide">Xem hướng dẫn SMS ›</button>':''}</p></div>`).join('')}</div><h3>Các kênh hỗ trợ khác</h3><div class="support-channels"><div class="support-channel-card"><img src="${A('help-provider')}" alt=""><strong>Hỗ trợ nhà mạng</strong><p>Liên hệ nhà mạng của bạn để được hỗ trợ thanh toán, gia hạn và hủy gói.</p><button data-go="smsGuide">Xem hướng dẫn ›</button></div><div class="support-channel-card"><img src="${A('help-chat')}" alt=""><strong>Liên hệ hỗ trợ</strong><p>Đội ngũ chăm sóc khách hàng luôn sẵn sàng giải đáp thắc mắc.</p><button data-action="supportContact">Gửi yêu cầu hỗ trợ ›</button></div></div></div>`}
 function auth(){const otp=state.authStep==='otp';return `<div class="new-auth">
 <div class="auth-brand"><img src="${A('wiig-logo')}" alt="WiiG"><span>Digital Play, Everyday Fun</span></div>
-${otp?'<button class="auth-back" data-action="editphone" aria-label="Quay lại">‹</button>':''}
+<button class="auth-back" data-action="${otp?'editphone':'backAuth'}" aria-label="Quay lại">‹</button>
 <img class="auth-illustration" src="${A('welcome-mascots')}" alt="Nhân vật WiiG và robot">
 <h1>${otp?'Xác thực số điện thoại':'Chào mừng đến WiiG'}</h1>
 <p class="auth-description">${otp?'Chúng tôi đã gửi mã xác thực (OTP) gồm 6 chữ số đến số điện thoại của bạn.':'Khám phá thế giới game giải trí hấp dẫn mỗi ngày, mọi lúc, mọi nơi.'}</p>
-<div class="auth-form"><label>Số điện thoại</label><div class="phone-field"><span class="country-code"><img src="${A('flag-vn')}" alt="Việt Nam"> +84 <span class="down">⌄</span></span>${otp?`<strong>${esc(state.phone||'')}</strong><button class="text-link" data-action="editphone">Thay đổi</button>`:`<input id="phone-input" inputmode="tel" type="tel" placeholder="Nhập số điện thoại" value="${esc(state.phone)}" autocomplete="tel">`}</div>
+<div class="auth-form"><label>Số điện thoại</label><div class="phone-field"><span class="country-code"><img src="${A('flag-vn')}" alt="Việt Nam"> +84 <span class="down">⌄</span></span>${otp?`<strong>${esc(state.phone||'')}</strong><button class="text-link" data-action="editphone">Thay đổi</button>`:`<input id="phone-input" inputmode="numeric" type="tel" pattern="[0-9]*" maxlength="10" placeholder="Nhập số điện thoại" value="${esc(state.phone)}" autocomplete="tel" aria-describedby="auth-error">`}</div>
 ${otp?`<div class="otp-label"><label>Nhập mã OTP</label><small>Mã gồm 6 chữ số</small></div><div class="otp-boxes" id="otp-boxes">${Array.from({length:6},(_,i)=>`<input class="otp-digit" inputmode="numeric" type="text" maxlength="1" aria-label="Số OTP ${i+1}" autocomplete="${i===0?'one-time-code':'off'}">`).join('')}</div>`:''}
 <div class="auth-assurance"><img class="auth-shield-icon" src="${A('otp-shield')}" alt=""><span>${otp?'Mã OTP được bảo mật và chỉ có hiệu lực trong thời gian ngắn.':'Chúng tôi sử dụng số điện thoại để đăng nhập an toàn và bảo vệ tài khoản của bạn.'}</span></div>
 ${otp?'<p class="auth-resend">Gửi lại sau <strong id="otp-countdown">00:45</strong></p>':''}
@@ -286,10 +286,39 @@ function handleAction(action){
  if(action==='play'){requestPlay(state.game);return;}
  if(action==='favorite'){if(!state.loggedIn){state.returnAfterLogin='favorite';state.authStep='phone';go('account');return;}state.favorites=state.favorites||[];state.favorites=state.favorites.includes(state.game)?state.favorites.filter(x=>x!==state.game):[...state.favorites,state.game];save();render();return;}
  if(action==='editphone'){state.authStep='phone';render();return;}
+ if(action==='backAuth'){
+  // Return to the page the user came from, bypassing protected-page redirects.
+  // In particular, never call go('packages') here while logged out: that
+  // would immediately redirect back to this same login screen.
+  const allowed=['home','catalog','detail','tournament','leaderboard','wallet','walletHistory','notifications','termsPrivacy','helpCenter','smsGuide'];
+  const target=allowed.includes(state.previous)&&state.previous!=='account'?state.previous:'home';
+  state.authStep='phone';state.returnAfterLogin='home';
+  state.page=target;state.query='';save();render();window.scrollTo(0,0);return;
+ }
+ if(action==='editprofile'){
+  const value=window.prompt('Cập nhật số điện thoại',state.phone||'');
+  if(value===null)return;
+  const phone=value.replace(/\D/g,'');
+  if(phone.length>=9&&phone.length<=11){state.phone=phone;save();render();showModal('Đã cập nhật','Thông tin cá nhân đã được cập nhật.');}
+  else showModal('Số điện thoại chưa hợp lệ','Vui lòng nhập số điện thoại từ 9 đến 11 chữ số.');
+  return;
+ }
+ if(action==='language'){
+  showModal('Ngôn ngữ','Hiện tại prototype hỗ trợ giao diện tiếng Việt. Bạn có thể chọn ngôn ngữ để lưu lựa chọn khi tích hợp bản dịch.',[['Hủy',()=>{}],['Tiếng Việt',()=>{state.language='vi';save();render();showModal('Ngôn ngữ đã chọn','Giao diện đang sử dụng Tiếng Việt.')}],['English',()=>{state.language='en';save();showModal('Chưa có bản dịch','Đã lưu lựa chọn English, nhưng cần bổ sung bộ dịch giao diện để đổi toàn bộ nội dung.')}]]);return;
+ }
+ if(action==='logout'){
+  showModal('Đăng xuất','Bạn có chắc chắn muốn đăng xuất khỏi tài khoản WiiG?', [['Hủy',()=>{}],['Đăng xuất',()=>{state.loggedIn=false;state.credits=0;state.phone='';state.authStep='phone';state.returnAfterLogin='home';state.page='home';save();render();window.scrollTo(0,0)}]]);return;
+ }
+
  if(action==='sendotp'){
-  const input=document.getElementById('phone-input');const phone=(input?.value||'').replace(/\D/g,'');
+  const input=document.getElementById('phone-input');let phone=(input?.value||'').replace(/\D/g,'');
   const err=document.getElementById('auth-error');
-  if(phone.length<9||phone.length>11){if(err)err.textContent='Vui lòng nhập số điện thoại hợp lệ.';return;}
+  // UI uses +84, so accept the 9-digit national mobile number without the leading 0.
+  // For convenience, normalize a locally formatted 0xxxxxxxxx number as well.
+  if(phone.startsWith('0084'))phone=phone.slice(4);else if(phone.startsWith('84')&&phone.length===11)phone=phone.slice(2);else if(phone.startsWith('0')&&phone.length===10)phone=phone.slice(1);
+  const prefix=Number(phone.slice(0,2));
+  const validPrefix=(prefix>=32&&prefix<=39)||[52,56,58,59].includes(prefix)||(prefix>=70&&prefix<=79)||(prefix>=81&&prefix<=89)||(prefix>=90&&prefix<=99);
+  if(phone.length!==9||!validPrefix){if(err)err.textContent='Nhập số di động Việt Nam hợp lệ gồm 9 chữ số sau mã +84 (ví dụ 912345678).';return;}
   state.phone=phone;state.authStep='otp';save();render();return;
  }
  if(action==='verifyotp'){
@@ -312,12 +341,14 @@ function handleAction(action){
   state.paymentCode='TX-'+Date.now().toString().slice(-8);state.paymentDate=new Date().toLocaleString('vi-VN');state.paymentStage='processing';save();go('packageProcessing');return;
  }
  if(action==='completePurchase'){
+  if(!requireAuth('packages'))return;
   const p=purchaseSelected();state.credits=(Number(state.credits)||0)+p.count;state.transactions=state.transactions||[];state.transactions.push({credits:p.count,date:new Date().toLocaleDateString('vi-VN')});state.paymentStage='success';save();go('packageSuccess');return;
  }
  if(action==='supportContact'){showModal('Liên hệ hỗ trợ','Đây là bản prototype. Hãy tích hợp kênh hỗ trợ thực tế để gửi yêu cầu.',[['Đóng',()=>{}]]);return;}
 }
 function bindOtp(){const inputs=Array.from(document.querySelectorAll('.otp-digit'));inputs.forEach((input,i)=>{input.addEventListener('input',e=>{const v=e.target.value.replace(/\D/g,'');if(v.length>1){[...v.slice(0,6-i)].forEach((d,k)=>{if(inputs[i+k])inputs[i+k].value=d});inputs[Math.min(5,i+v.length-1)].focus()}else{input.value=v;if(v&&i<5)inputs[i+1].focus()}});input.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!input.value&&i>0)inputs[i-1].focus()});input.addEventListener('paste',e=>{e.preventDefault();const v=e.clipboardData.getData('text').replace(/\D/g,'').slice(0,6);[...v].forEach((d,k)=>{inputs[k].value=d});inputs[Math.min(5,v.length)].focus()})});if(inputs.length)inputs[0].focus()}
 function bind(){
+ const phoneInput=document.getElementById('phone-input');if(phoneInput){phoneInput.addEventListener('input',()=>{const clean=phoneInput.value.replace(/\D/g,'').slice(0,10);if(phoneInput.value!==clean)phoneInput.value=clean;const err=document.getElementById('auth-error');if(err)err.textContent='';});phoneInput.addEventListener('keydown',e=>{if(['e','E','+','-','.'].includes(e.key))e.preventDefault()});phoneInput.addEventListener('paste',e=>{e.preventDefault();phoneInput.value=e.clipboardData.getData('text').replace(/\D/g,'').slice(0,10);phoneInput.dispatchEvent(new Event('input',{bubbles:true}));});}
 document.querySelectorAll('[data-play-game]').forEach(b=>b.onclick=()=>requestPlay(b.dataset.playGame));
 
 document.querySelectorAll('[data-detail-ranking]').forEach(b=>b.onclick=()=>{state.rankGame=state.game;rankNavigate('rankGame')});
