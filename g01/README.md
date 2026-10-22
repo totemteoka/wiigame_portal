@@ -1,1 +1,0 @@
-G01: biểu tượng quốc gia và ngôn ngữ trong màn xác nhận tự đổi theo lựa chọn. 6 quốc gia phổ biến dùng cờ ảnh gốc Figma; các quốc gia chưa có asset dùng mã quốc gia. Mở index.html để chạy.
