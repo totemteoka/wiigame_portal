@@ -1,0 +1,786 @@
+[
+  {
+    "id": "itch-drop-merge-beach",
+    "name": "Watermelon Merge",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/drop-merge-beach",
+    "openInTab": true,
+    "art": "assets/itch-drop-merge-beach.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tumble-rush",
+    "name": "Fall Rush",
+    "category": "Runner",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tumble-rush",
+    "openInTab": true,
+    "art": "assets/itch-tumble-rush.jpg",
+    "desc": "Chạy không dừng, né tránh và phá kỷ lục.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-old-vs-zombie",
+    "name": "2D Zombie Age",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/old-vs-zombie",
+    "openInTab": true,
+    "art": "assets/itch-old-vs-zombie.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tank-adventure",
+    "name": "Tank n Jets",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tank-adventure",
+    "openInTab": true,
+    "art": "assets/itch-tank-adventure.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-arrow-run",
+    "name": "Arrow Aim",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/arrow-run",
+    "openInTab": true,
+    "art": "assets/itch-arrow-run.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-plantvszom",
+    "name": "Angry Plants Fighting",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/plantvszom",
+    "openInTab": true,
+    "art": "assets/itch-plantvszom.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-car-garage",
+    "name": "Vehicle Factory",
+    "category": "Racing",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/car-garage",
+    "openInTab": true,
+    "art": "assets/itch-car-garage.jpg",
+    "desc": "Lái xe, vượt chướng ngại và chinh phục đường đua.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-car-driver",
+    "name": "Fast Driver 3D",
+    "category": "Racing",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/car-driver",
+    "openInTab": true,
+    "art": "assets/itch-car-driver.jpg",
+    "desc": "Lái xe, vượt chướng ngại và chinh phục đường đua.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-fall-run",
+    "name": "Fall Boys",
+    "category": "Runner",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/fall-run",
+    "openInTab": true,
+    "art": "assets/itch-fall-run.jpg",
+    "desc": "Chạy không dừng, né tránh và phá kỷ lục.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tower-defend",
+    "name": "Fortress Defense",
+    "category": "Defense",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tower-defend",
+    "openInTab": true,
+    "art": "assets/itch-tower-defend.jpg",
+    "desc": "Xây tháp, phòng thủ và đẩy lùi làn sóng kẻ địch.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-gunfight",
+    "name": "Gangster War",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/gunfight",
+    "openInTab": true,
+    "art": "assets/itch-gunfight.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-match-3-forest",
+    "name": "Magic Forest",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/match-3-forest",
+    "openInTab": true,
+    "art": "assets/itch-match-3-forest.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-parkuor",
+    "name": "Parkour Mania",
+    "category": "Runner",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/parkuor",
+    "openInTab": true,
+    "art": "assets/itch-parkuor.jpg",
+    "desc": "Chạy không dừng, né tránh và phá kỷ lục.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-ping-pong",
+    "name": "Pong Ball",
+    "category": "Sports",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/ping-pong",
+    "openInTab": true,
+    "art": "assets/itch-ping-pong.jpg",
+    "desc": "Cùng tranh tài trong các thử thách thể thao.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tower-hero",
+    "name": "Hero Tower Wars",
+    "category": "Defense",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tower-hero",
+    "openInTab": true,
+    "art": "assets/itch-tower-hero.jpg",
+    "desc": "Xây tháp, phòng thủ và đẩy lùi làn sóng kẻ địch.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-submarin",
+    "name": "Merge Evolution",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/submarin",
+    "openInTab": true,
+    "art": "assets/itch-submarin.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-adventure",
+    "name": "Prehistoric Adventure",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/adventure",
+    "openInTab": true,
+    "art": "assets/itch-adventure.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-zombieshooting",
+    "name": "Zombie Slayer",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/zombieshooting",
+    "openInTab": true,
+    "art": "assets/itch-zombieshooting.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-shark",
+    "name": "Daddy Shark Adventure",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/shark",
+    "openInTab": true,
+    "art": "assets/itch-shark.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-penguinio",
+    "name": "Penguin.io",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/penguinio",
+    "openInTab": true,
+    "art": "assets/itch-penguinio.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-brain-game",
+    "name": "Brain Master",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/brain-game",
+    "openInTab": true,
+    "art": "assets/itch-brain-game.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-find-diff",
+    "name": "Find The Differences",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/find-diff",
+    "openInTab": true,
+    "art": "assets/itch-find-diff.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-kick-ball",
+    "name": "Super Kick",
+    "category": "Runner",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/kick-ball",
+    "openInTab": true,
+    "art": "assets/itch-kick-ball.jpg",
+    "desc": "Chạy không dừng, né tránh và phá kỷ lục.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-save-the-pet",
+    "name": "Save My Pet",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/save-the-pet",
+    "openInTab": true,
+    "art": "assets/itch-save-the-pet.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-onet-puzzle",
+    "name": "Onet Connect",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/onet-puzzle",
+    "openInTab": true,
+    "art": "assets/itch-onet-puzzle.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tile-match",
+    "name": "Tiles Match 3",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tile-match",
+    "openInTab": true,
+    "art": "assets/itch-tile-match.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-squidgame",
+    "name": "Squid Sniper",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/squidgame",
+    "openInTab": true,
+    "art": "assets/itch-squidgame.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-weapon-transformer",
+    "name": "Weapon Transformer",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/weapon-transformer",
+    "openInTab": true,
+    "art": "assets/itch-weapon-transformer.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-farm",
+    "name": "Farm Legend",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/farm",
+    "openInTab": true,
+    "art": "assets/itch-farm.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-talking-cat",
+    "name": "Talking Cat",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/talking-cat",
+    "openInTab": true,
+    "art": "assets/itch-talking-cat.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-dressupidol",
+    "name": "Model Dress Up",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/dressupidol",
+    "openInTab": true,
+    "art": "assets/itch-dressupidol.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-space-defend",
+    "name": "Space Defender",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/space-defend",
+    "openInTab": true,
+    "art": "assets/itch-space-defend.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-pirate-defend",
+    "name": "Pirate Defense",
+    "category": "Defense",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/pirate-defend",
+    "openInTab": true,
+    "art": "assets/itch-pirate-defend.jpg",
+    "desc": "Xây tháp, phòng thủ và đẩy lùi làn sóng kẻ địch.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-gym-merge",
+    "name": "Merge Muscle Tycoon",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/gym-merge",
+    "openInTab": true,
+    "art": "assets/itch-gym-merge.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-sorting-water",
+    "name": "Water Sorting Puzzle",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/sorting-water",
+    "openInTab": true,
+    "art": "assets/itch-sorting-water.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-throw-knife",
+    "name": "Weapon Strike",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/throw-knife",
+    "openInTab": true,
+    "art": "assets/itch-throw-knife.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-merge-miners",
+    "name": "Merge Miners",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/merge-miners",
+    "openInTab": true,
+    "art": "assets/itch-merge-miners.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-draw-missing",
+    "name": "Draw Missing Part",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/draw-missing",
+    "openInTab": true,
+    "art": "assets/itch-draw-missing.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-stickman-hook",
+    "name": "Stickman Hook",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/stickman-hook",
+    "openInTab": true,
+    "art": "assets/itch-stickman-hook.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-draw-puzzle",
+    "name": "Draw Save Puzzle",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/draw-puzzle",
+    "openInTab": true,
+    "art": "assets/itch-draw-puzzle.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-nail-coloring",
+    "name": "Nail Coloring",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/nail-coloring",
+    "openInTab": true,
+    "art": "assets/itch-nail-coloring.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-idle-restaurant",
+    "name": "Idle Restaurant",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/idle-restaurant",
+    "openInTab": true,
+    "art": "assets/itch-idle-restaurant.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-escape",
+    "name": "Wednesday Escape",
+    "category": "Puzzle",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/escape",
+    "openInTab": true,
+    "art": "assets/itch-escape.jpg",
+    "desc": "Thử thách tư duy với lối chơi puzzle hấp dẫn.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-saw-hero",
+    "name": "Saw Hero",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/saw-hero",
+    "openInTab": true,
+    "art": "assets/itch-saw-hero.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-darkvslight",
+    "name": "Dark VS Light",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/darkvslight",
+    "openInTab": true,
+    "art": "assets/itch-darkvslight.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-aquapark",
+    "name": "Aquapark Factory",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/aquapark",
+    "openInTab": true,
+    "art": "assets/itch-aquapark.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-king-adventure",
+    "name": "Adventure Of King",
+    "category": "Casual",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/king-adventure",
+    "openInTab": true,
+    "art": "assets/itch-king-adventure.jpg",
+    "desc": "Trải nghiệm game casual dễ chơi, dễ nghiện.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-arrowdefend",
+    "name": "Archer Defense",
+    "category": "Defense",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/arrowdefend",
+    "openInTab": true,
+    "art": "assets/itch-arrowdefend.jpg",
+    "desc": "Xây tháp, phòng thủ và đẩy lùi làn sóng kẻ địch.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  },
+  {
+    "id": "itch-tiny-shooter",
+    "name": "Tiny Metal Shooter",
+    "category": "Action",
+    "cost": 1,
+    "rating": "4.7",
+    "url": "https://nguyenhongnam.itch.io/tiny-shooter",
+    "openInTab": true,
+    "art": "assets/itch-tiny-shooter.jpg",
+    "desc": "Hành động tốc độ cao và phản xạ nhanh.",
+    "how": [
+      "Chạm để điều khiển trong game.",
+      "Hoàn thành mục tiêu để ghi điểm.",
+      "Chơi lại để phá kỷ lục của bạn."
+    ]
+  }
+]

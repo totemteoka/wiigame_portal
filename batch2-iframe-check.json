@@ -1,0 +1,492 @@
+[
+  {
+    "id": "itch-drop-merge-beach",
+    "name": "Watermelon Merge",
+    "url": "https://nguyenhongnam.itch.io/drop-merge-beach",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tumble-rush",
+    "name": "Fall Rush",
+    "url": "https://nguyenhongnam.itch.io/tumble-rush",
+    "status": 429,
+    "xfo": "",
+    "csp": "",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-old-vs-zombie",
+    "name": "2D Zombie Age",
+    "url": "https://nguyenhongnam.itch.io/old-vs-zombie",
+    "status": 429,
+    "xfo": "",
+    "csp": "",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tank-adventure",
+    "name": "Tank n Jets",
+    "url": "https://nguyenhongnam.itch.io/tank-adventure",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-arrow-run",
+    "name": "Arrow Aim",
+    "url": "https://nguyenhongnam.itch.io/arrow-run",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-plantvszom",
+    "name": "Angry Plants Fighting",
+    "url": "https://nguyenhongnam.itch.io/plantvszom",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-car-garage",
+    "name": "Vehicle Factory",
+    "url": "https://nguyenhongnam.itch.io/car-garage",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-car-driver",
+    "name": "Fast Driver 3D",
+    "url": "https://nguyenhongnam.itch.io/car-driver",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-fall-run",
+    "name": "Fall Boys",
+    "url": "https://nguyenhongnam.itch.io/fall-run",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tower-defend",
+    "name": "Fortress Defense",
+    "url": "https://nguyenhongnam.itch.io/tower-defend",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-gunfight",
+    "name": "Gangster War",
+    "url": "https://nguyenhongnam.itch.io/gunfight",
+    "status": 429,
+    "xfo": "",
+    "csp": "",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-match-3-forest",
+    "name": "Magic Forest",
+    "url": "https://nguyenhongnam.itch.io/match-3-forest",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-parkuor",
+    "name": "Parkour Mania",
+    "url": "https://nguyenhongnam.itch.io/parkuor",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-ping-pong",
+    "name": "Pong Ball",
+    "url": "https://nguyenhongnam.itch.io/ping-pong",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tower-hero",
+    "name": "Hero Tower Wars",
+    "url": "https://nguyenhongnam.itch.io/tower-hero",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-submarin",
+    "name": "Merge Evolution",
+    "url": "https://nguyenhongnam.itch.io/submarin",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-adventure",
+    "name": "Prehistoric Adventure",
+    "url": "https://nguyenhongnam.itch.io/adventure",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-zombieshooting",
+    "name": "Zombie Slayer",
+    "url": "https://nguyenhongnam.itch.io/zombieshooting",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-shark",
+    "name": "Daddy Shark Adventure",
+    "url": "https://nguyenhongnam.itch.io/shark",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-penguinio",
+    "name": "Penguin.io",
+    "url": "https://nguyenhongnam.itch.io/penguinio",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-brain-game",
+    "name": "Brain Master",
+    "url": "https://nguyenhongnam.itch.io/brain-game",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-find-diff",
+    "name": "Find The Differences",
+    "url": "https://nguyenhongnam.itch.io/find-diff",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-kick-ball",
+    "name": "Super Kick",
+    "url": "https://nguyenhongnam.itch.io/kick-ball",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-save-the-pet",
+    "name": "Save My Pet",
+    "url": "https://nguyenhongnam.itch.io/save-the-pet",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-onet-puzzle",
+    "name": "Onet Connect",
+    "url": "https://nguyenhongnam.itch.io/onet-puzzle",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tile-match",
+    "name": "Tiles Match 3",
+    "url": "https://nguyenhongnam.itch.io/tile-match",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-squidgame",
+    "name": "Squid Sniper",
+    "url": "https://nguyenhongnam.itch.io/squidgame",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-weapon-transformer",
+    "name": "Weapon Transformer",
+    "url": "https://nguyenhongnam.itch.io/weapon-transformer",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-farm",
+    "name": "Farm Legend",
+    "url": "https://nguyenhongnam.itch.io/farm",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-talking-cat",
+    "name": "Talking Cat",
+    "url": "https://nguyenhongnam.itch.io/talking-cat",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-dressupidol",
+    "name": "Model Dress Up",
+    "url": "https://nguyenhongnam.itch.io/dressupidol",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-space-defend",
+    "name": "Space Defender",
+    "url": "https://nguyenhongnam.itch.io/space-defend",
+    "status": 404,
+    "xfo": "",
+    "csp": "",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-pirate-defend",
+    "name": "Pirate Defense",
+    "url": "https://nguyenhongnam.itch.io/pirate-defend",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-gym-merge",
+    "name": "Merge Muscle Tycoon",
+    "url": "https://nguyenhongnam.itch.io/gym-merge",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-sorting-water",
+    "name": "Water Sorting Puzzle",
+    "url": "https://nguyenhongnam.itch.io/sorting-water",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-throw-knife",
+    "name": "Weapon Strike",
+    "url": "https://nguyenhongnam.itch.io/throw-knife",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-merge-miners",
+    "name": "Merge Miners",
+    "url": "https://nguyenhongnam.itch.io/merge-miners",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-draw-missing",
+    "name": "Draw Missing Part",
+    "url": "https://nguyenhongnam.itch.io/draw-missing",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-stickman-hook",
+    "name": "Stickman Hook",
+    "url": "https://nguyenhongnam.itch.io/stickman-hook",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-draw-puzzle",
+    "name": "Draw Save Puzzle",
+    "url": "https://nguyenhongnam.itch.io/draw-puzzle",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-nail-coloring",
+    "name": "Nail Coloring",
+    "url": "https://nguyenhongnam.itch.io/nail-coloring",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-idle-restaurant",
+    "name": "Idle Restaurant",
+    "url": "https://nguyenhongnam.itch.io/idle-restaurant",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-escape",
+    "name": "Wednesday Escape",
+    "url": "https://nguyenhongnam.itch.io/escape",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-saw-hero",
+    "name": "Saw Hero",
+    "url": "https://nguyenhongnam.itch.io/saw-hero",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-darkvslight",
+    "name": "Dark VS Light",
+    "url": "https://nguyenhongnam.itch.io/darkvslight",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-aquapark",
+    "name": "Aquapark Factory",
+    "url": "https://nguyenhongnam.itch.io/aquapark",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-king-adventure",
+    "name": "Adventure Of King",
+    "url": "https://nguyenhongnam.itch.io/king-adventure",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-arrowdefend",
+    "name": "Archer Defense",
+    "url": "https://nguyenhongnam.itch.io/arrowdefend",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  },
+  {
+    "id": "itch-tiny-shooter",
+    "name": "Tiny Metal Shooter",
+    "url": "https://nguyenhongnam.itch.io/tiny-shooter",
+    "status": 200,
+    "xfo": "",
+    "csp": "frame-ancestors 'self' https://itch.io",
+    "mode": "tab",
+    "note": "itch CSP frame-ancestors self+itch.io"
+  }
+]

@@ -729,3 +729,25 @@ body.hb-game-open{overflow:hidden!important}
 @media(max-width:520px){.profile-figma-v40 .profile-language-row{gap:8px;padding:10px 8px;flex-wrap:wrap}.profile-figma-v40 .profile-language-heading{flex:1 1 110px}.profile-figma-v40 .profile-language-options{flex:1 1 100%;padding-left:40px;justify-content:flex-start}}
 /* v84: make game artwork and titles open Game Details wherever listed */
 .catalog-card img[data-detail], .catalog-card h3[data-detail], .game-list-item img[data-detail], .game-list-item h3[data-detail] { cursor: pointer; }
+
+/* v85: support expanded category set (Runner/Racing/Defense) with horizontal scroll */
+.category-grid{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:76px;
+  grid-template-columns:none;
+  gap:16px;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  padding:2px 2px 8px;
+  margin:0 0 14px;
+  justify-content:start;
+  scrollbar-width:thin;
+}
+.category-grid .category-tile,.category-grid .category-tile:nth-child(n){width:76px;min-width:76px}
+.filters{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:6px;scrollbar-width:thin}
+.filters button{flex:0 0 auto}
+@media(max-width:620px){
+  .category-grid{grid-auto-columns:64px;gap:8px;margin:0 0 10px}
+  .category-grid .category-tile,.category-grid .category-tile:nth-child(n){width:64px;min-width:64px;min-height:74px;font-size:10px}
+}
