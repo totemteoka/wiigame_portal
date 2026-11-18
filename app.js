@@ -478,9 +478,10 @@ function handleAction(action){
   const otp=Array.from(document.querySelectorAll('.otp-digit')).map(x=>x.value).join('');
   const err=document.getElementById('auth-error');
   if(otp!=='123456'){if(err)err.textContent='Mã OTP chưa đúng. Hãy nhập 123456 để thử nghiệm.';return;}
-  state.loggedIn=true;state.credits=Math.max(0,Number(state.credits)||0);save();
+  // TEMP: mỗi lần đăng nhập cấp 10 lượt để test
+  state.loggedIn=true;state.credits=10;save();
   const next=state.returnAfterLogin||'home';
-  if(next==='play'){go('detail');showModal('Đăng nhập thành công',state.credits>0?'Bạn đã đăng nhập. Hãy nhấn Chơi ngay để bắt đầu.':'Bạn đã đăng nhập nhưng chưa có lượt chơi. Hãy nạp lượt trước khi chơi.',[['Đóng',()=>{}],...(state.credits>0?[]:[['Nạp lượt',()=>go('packages')]])]);}
+  if(next==='play'){go('detail');showModal('Đăng nhập thành công','Bạn đã nhận 10 lượt chơi. Hãy nhấn Chơi ngay để bắt đầu.',[['Đóng',()=>{}]]);}
   else if(next==='favorite'){go('detail');}
   else go(next==='mygames'?'mygames':next==='packages'?'packages':'home');
   return;
